@@ -382,7 +382,7 @@ struct ShoppingListView: View {
         VStack(alignment: .leading, spacing: 16) {
             if let nextStop = sortedActiveItems.first {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("NEXT STOP")
+                    Text("Closest Item")
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(.primary)
 
