@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeCompanionApp: App {
     var body: some Scene {
         WindowGroup {
-            CartPage()
+            MainTabView()
         }
     }
 }

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		580E4F242FF7EDFE00D8EFCA /* MySpacesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E4F232FF7EDFE00D8EFCA /* MySpacesSection.swift */; };
+		580E4F272FF7F2DB00D8EFCA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E4F262FF7F2DB00D8EFCA /* MainTabView.swift */; };
+		580E4F292FF7F5B800D8EFCA /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E4F282FF7F5B800D8EFCA /* ViewModifiers.swift */; };
+		580E4F2B2FF7F93800D8EFCA /* MyHomeHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580E4F2A2FF7F93800D8EFCA /* MyHomeHero.swift */; };
 		585331CE2FF6F0F100143BFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 585331B42FF6F0F100143BFC /* Assets.xcassets */; };
 		585331D12FF6F0F100143BFC /* AccountTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B22FF6F0F100143BFC /* AccountTabView.swift */; };
 		585331D22FF6F0F100143BFC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B32FF6F0F100143BFC /* AccountView.swift */; };
-		585331D32FF6F0F100143BFC /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B52FF6F0F100143BFC /* CartPage.swift */; };
 		585331D42FF6F0F100143BFC /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B62FF6F0F100143BFC /* CartView.swift */; };
 		585331D52FF6F0F100143BFC /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B72FF6F0F100143BFC /* ContactInfo.swift */; };
 		585331D62FF6F0F100143BFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331B82FF6F0F100143BFC /* ContentView.swift */; };
@@ -27,6 +30,15 @@
 		585331E32FF6F0F100143BFC /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331C62FF6F0F100143BFC /* ProductImage.swift */; };
 		585331E42FF6F0F100143BFC /* QuantityStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331C72FF6F0F100143BFC /* QuantityStepper.swift */; };
 		585331E62FF6F0F100143BFC /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585331C92FF6F0F100143BFC /* ShopView.swift */; };
+		58CC15C32FF70D0A00279FC1 /* MyProductsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CC15C22FF70D0A00279FC1 /* MyProductsSection.swift */; };
+		58CC15C52FF70D7400279FC1 /* MyHomeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CC15C42FF70D7400279FC1 /* MyHomeSectionHeader.swift */; };
+		58CC15C72FF70E3000279FC1 /* MyHomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CC15C62FF70E3000279FC1 /* MyHomeCard.swift */; };
+		58CC15C92FF7146900279FC1 /* MyHomeAddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CC15C82FF7146900279FC1 /* MyHomeAddCard.swift */; };
+		9F4105052FF83E7D00F2384C /* MyHomePropertyStatsPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4105042FF83E7D00F2384C /* MyHomePropertyStatsPill.swift */; };
+		9F4105072FF83E7D00F2384C /* MyHomeHealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4105062FF83E7D00F2384C /* MyHomeHealthCard.swift */; };
+		9F4105092FF83E7D00F2384C /* MyHomeTaskCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4105082FF83E7D00F2384C /* MyHomeTaskCard.swift */; };
+		9F41050B2FF83EDC00F2384C /* MyHomeAddressBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41050A2FF83EDC00F2384C /* MyHomeAddressBlock.swift */; };
+		9F41050D2FF9464600F2384C /* MyHomeTaskCard2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F41050C2FF9464600F2384C /* MyHomeTaskCard2.swift */; };
 		9F81AAB22FF7004300CE95C6 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 585332132FF6FDB000143BFC /* fonts */; };
 /* End PBXBuildFile section */
 
@@ -42,10 +54,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		580E4F232FF7EDFE00D8EFCA /* MySpacesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MySpacesSection.swift; path = Features/Account/MySpacesSection.swift; sourceTree = SOURCE_ROOT; };
+		580E4F262FF7F2DB00D8EFCA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		580E4F282FF7F5B800D8EFCA /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
+		580E4F2A2FF7F93800D8EFCA /* MyHomeHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyHomeHero.swift; path = Features/Account/MyHomeHero.swift; sourceTree = SOURCE_ROOT; };
 		585331B22FF6F0F100143BFC /* AccountTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTabView.swift; sourceTree = "<group>"; };
 		585331B32FF6F0F100143BFC /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		585331B42FF6F0F100143BFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		585331B52FF6F0F100143BFC /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
 		585331B62FF6F0F100143BFC /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		585331B72FF6F0F100143BFC /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
 		585331B82FF6F0F100143BFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +78,15 @@
 		585331C72FF6F0F100143BFC /* QuantityStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityStepper.swift; sourceTree = "<group>"; };
 		585331C92FF6F0F100143BFC /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		585332132FF6FDB000143BFC /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		58CC15C22FF70D0A00279FC1 /* MyProductsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyProductsSection.swift; path = Features/Account/MyProductsSection.swift; sourceTree = SOURCE_ROOT; };
+		58CC15C42FF70D7400279FC1 /* MyHomeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyHomeSectionHeader.swift; path = Features/Account/MyHomeSectionHeader.swift; sourceTree = SOURCE_ROOT; };
+		58CC15C62FF70E3000279FC1 /* MyHomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyHomeCard.swift; path = Features/Account/MyHomeCard.swift; sourceTree = SOURCE_ROOT; };
+		58CC15C82FF7146900279FC1 /* MyHomeAddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyHomeAddCard.swift; path = Features/Account/MyHomeAddCard.swift; sourceTree = SOURCE_ROOT; };
+		9F4105042FF83E7D00F2384C /* MyHomePropertyStatsPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomePropertyStatsPill.swift; sourceTree = "<group>"; };
+		9F4105062FF83E7D00F2384C /* MyHomeHealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeHealthCard.swift; sourceTree = "<group>"; };
+		9F4105082FF83E7D00F2384C /* MyHomeTaskCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeTaskCard.swift; sourceTree = "<group>"; };
+		9F41050A2FF83EDC00F2384C /* MyHomeAddressBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeAddressBlock.swift; sourceTree = "<group>"; };
+		9F41050C2FF9464600F2384C /* MyHomeTaskCard2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeTaskCard2.swift; sourceTree = "<group>"; };
 		9F46E4BB2FD5BE1000C6CDBD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		9F46E4BD2FD5BE1000C6CDBD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9FCB93322F96C55E009DFBA2 /* Home Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		580E4F252FF7F27F00D8EFCA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				580E4F262FF7F2DB00D8EFCA /* MainTabView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		585331E72FF6F50100143BFC /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +164,11 @@
 				585331EA2FF6F5DE00143BFC /* Sections */,
 				585331EB2FF6F5EB00143BFC /* Cards */,
 				585331EC2FF6F5F100143BFC /* Components */,
+				9F41050A2FF83EDC00F2384C /* MyHomeAddressBlock.swift */,
+				9F4105042FF83E7D00F2384C /* MyHomePropertyStatsPill.swift */,
+				9F4105062FF83E7D00F2384C /* MyHomeHealthCard.swift */,
+				9F4105082FF83E7D00F2384C /* MyHomeTaskCard.swift */,
+				9F41050C2FF9464600F2384C /* MyHomeTaskCard2.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -139,6 +176,9 @@
 		585331EA2FF6F5DE00143BFC /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				58CC15C22FF70D0A00279FC1 /* MyProductsSection.swift */,
+				580E4F232FF7EDFE00D8EFCA /* MySpacesSection.swift */,
+				580E4F2A2FF7F93800D8EFCA /* MyHomeHero.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -146,6 +186,8 @@
 		585331EB2FF6F5EB00143BFC /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				58CC15C62FF70E3000279FC1 /* MyHomeCard.swift */,
+				58CC15C82FF7146900279FC1 /* MyHomeAddCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -153,6 +195,7 @@
 		585331EC2FF6F5F100143BFC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				58CC15C42FF70D7400279FC1 /* MyHomeSectionHeader.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -168,7 +211,6 @@
 		585331EE2FF6F68200143BFC /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				585331B52FF6F0F100143BFC /* CartPage.swift */,
 				585331B62FF6F0F100143BFC /* CartView.swift */,
 				585331C52FF6F0F100143BFC /* ProductCard.swift */,
 				585331C62FF6F0F100143BFC /* ProductImage.swift */,
@@ -195,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				585331BA2FF6F0F100143BFC /* Font+Extensions.swift */,
+				580E4F282FF7F5B800D8EFCA /* ViewModifiers.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -211,6 +254,7 @@
 		9FCB93292F96C55E009DFBA2 = {
 			isa = PBXGroup;
 			children = (
+				580E4F252FF7F27F00D8EFCA /* Components */,
 				585331F02FF6F6EC00143BFC /* Theme */,
 				585331E82FF6F55D00143BFC /* App */,
 				585331E72FF6F50100143BFC /* Features */,
@@ -303,22 +347,34 @@
 			isa = PBXSourcesBuildPhase;
 			files = (
 				585331D12FF6F0F100143BFC /* AccountTabView.swift in Sources */,
+				580E4F292FF7F5B800D8EFCA /* ViewModifiers.swift in Sources */,
 				585331D22FF6F0F100143BFC /* AccountView.swift in Sources */,
-				585331D32FF6F0F100143BFC /* CartPage.swift in Sources */,
+				58CC15C52FF70D7400279FC1 /* MyHomeSectionHeader.swift in Sources */,
 				585331D42FF6F0F100143BFC /* CartView.swift in Sources */,
+				580E4F2B2FF7F93800D8EFCA /* MyHomeHero.swift in Sources */,
+				580E4F272FF7F2DB00D8EFCA /* MainTabView.swift in Sources */,
 				585331D52FF6F0F100143BFC /* ContactInfo.swift in Sources */,
+				58CC15C32FF70D0A00279FC1 /* MyProductsSection.swift in Sources */,
 				585331D62FF6F0F100143BFC /* ContentView.swift in Sources */,
+				9F4105052FF83E7D00F2384C /* MyHomePropertyStatsPill.swift in Sources */,
+				9F41050D2FF9464600F2384C /* MyHomeTaskCard2.swift in Sources */,
+				9F4105072FF83E7D00F2384C /* MyHomeHealthCard.swift in Sources */,
 				585331D72FF6F0F100143BFC /* EditContactInfo.swift in Sources */,
+				9F4105092FF83E7D00F2384C /* MyHomeTaskCard.swift in Sources */,
+				580E4F242FF7EDFE00D8EFCA /* MySpacesSection.swift in Sources */,
 				585331D82FF6F0F100143BFC /* Font+Extensions.swift in Sources */,
+				58CC15C72FF70E3000279FC1 /* MyHomeCard.swift in Sources */,
 				585331D92FF6F0F100143BFC /* HomeCompanionApp.swift in Sources */,
 				585331DA2FF6F0F100143BFC /* MLM.swift in Sources */,
 				585331DB2FF6F0F100143BFC /* MyHomeTabView.swift in Sources */,
 				585331DE2FF6F0F100143BFC /* Payment.swift in Sources */,
 				585331DF2FF6F0F100143BFC /* Payment2.swift in Sources */,
 				585331E02FF6F0F100143BFC /* PaymentOption.swift in Sources */,
+				9F41050B2FF83EDC00F2384C /* MyHomeAddressBlock.swift in Sources */,
 				585331E12FF6F0F100143BFC /* PickupDetails.swift in Sources */,
 				585331E22FF6F0F100143BFC /* ProductCard.swift in Sources */,
 				585331E32FF6F0F100143BFC /* ProductImage.swift in Sources */,
+				58CC15C92FF7146900279FC1 /* MyHomeAddCard.swift in Sources */,
 				585331E42FF6F0F100143BFC /* QuantityStepper.swift in Sources */,
 				585331E62FF6F0F100143BFC /* ShopView.swift in Sources */,
 			);

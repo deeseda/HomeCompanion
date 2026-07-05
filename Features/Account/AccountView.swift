@@ -8,21 +8,15 @@
 import SwiftUI
 
 struct AccountView: View {
-
-    enum Tab {
-
+    enum Tab: Hashable {
         case account
-
         case myHome
-
     }
 
     @State private var selectedTab: Tab
 
     init(initialTab: Tab = .account) {
-
         _selectedTab = State(initialValue: initialTab)
-
     }
 
     var body: some View {
@@ -35,6 +29,7 @@ struct AccountView: View {
             }
         }
         .background(Color(.systemGroupedBackground))
+        .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button { } label: {
@@ -60,8 +55,6 @@ struct AccountView: View {
         }
     }
 }
-
-
 
 #Preview("My Home") {
     NavigationStack {
