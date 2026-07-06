@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct MyHomeTabView: View {
+    // Height of the blue/photo hero region (before the health card overlap).
+    private let heroHeight: CGFloat = 340
+
     var body: some View {
-        VStack(spacing: 32) {
+        VStack(spacing: 12) {
             heroSection
+            HomeGrid()
             MyProductsSection()
             MySpacesSection()
         }
@@ -19,7 +23,17 @@ struct MyHomeTabView: View {
     }
 
     private var heroSection: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(spacing: 0) {
+            hero
+
+            MyHomeHealthCard()
+                .padding(.horizontal, 16)
+                .padding(.top, -70)
+        }
+    }
+
+    private var hero: some View {
+        VStack(alignment: .leading, spacing: 16) {
             MyHomeAddressBlock(
                 address: "100 W Worthington Ave",
                 location: "Charlotte, NC 28203"
@@ -28,19 +42,10 @@ struct MyHomeTabView: View {
 
             MyHomePropertyStatsPill()
 
-            VStack(alignment: .leading, spacing: 16) {
-                Text("Your Home Today")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.white)
-
-                MyHomeHealthCard()
-                
-                MyHomeTaskCard()
-            }
+            Spacer(minLength: 24)
         }
         .padding(.horizontal, 16)
-        .padding(.bottom, 12)
+        .frame(height: heroHeight, alignment: .top)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(alignment: .bottom) {
             heroBackground
@@ -48,52 +53,38 @@ struct MyHomeTabView: View {
     }
 
     private var heroBackground: some View {
-        GeometryReader { geometry in
-            let extendedHeight = geometry.size.height + 220
+        // Tuning divisor for the parallax stretch on overscroll.
+        let stretchDivisor: CGFloat = 442
+        // Extra height above the hero so the image runs up behind the status bar
+        // and nav bar to the top of the screen.
+        let topOverhang: CGFloat = 160
 
-            ZStack(alignment: .bottom) {
-                Color.brandBlue
-                    .frame(height: extendedHeight)
+        return ZStack(alignment: .bottom) {
+            Color.brandBlue
 
-                Image("newhouse")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(
-                        width: geometry.size.width,
-                        height: extendedHeight,
-                        alignment: .bottom
-                    )
-                    .padding(.bottom, 32)
-
-                LinearGradient(
-                    colors: [
-                        Color.brandBlue,
-                        Color.brandBlue.opacity(0.1),
-                        Color.brandBlue.opacity(0.08),
-                        .clear,
-                        .clear,
-                        .clear,
-                        Color(.systemGroupedBackground)
-                    ],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-                .frame(height: extendedHeight)
-
-                LinearGradient(
-                    colors: [
-                        .clear,
-                        Color(.systemGroupedBackground)
-                    ],
-                    startPoint: UnitPoint(x: 0.5, y: 0.9),
-                    endPoint: .bottom
-                )
-                .frame(height: extendedHeight)
-            }
-            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottom)
+            Image("newhouse")
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity)
+                .frame(height: heroHeight + topOverhang, alignment: .bottom)
+                .clipped()
+                .visualEffect { content, proxy in
+                    let minY = proxy.frame(in: .scrollView).minY
+                    // Overscroll (pull down): stretch from the bottom.
+                    // Scrolling up: drift slower than the content for parallax.
+                    let scale = minY > 0 ? 1 + (minY / stretchDivisor) : 1
+                    let offset = minY > 0 ? 0 : -minY * 0.4
+                    return content
+                        .scaleEffect(scale, anchor: .bottom)
+                        .offset(y: offset)
+                }
         }
+        .frame(maxWidth: .infinity)
+        .frame(height: heroHeight + topOverhang, alignment: .bottom)
+        .clipped()
     }
 }
+
 
 #Preview {
     MyHomeTabView()
