@@ -14,13 +14,13 @@ struct MyHomeAddressBlock: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(address)
-                .font(.title)
+                .font(.largeTitle)
                 .fontWeight(.bold)
                 .lineLimit(1)
                 .minimumScaleFactor(0.78)
 
             Text(location)
-                .font(.subheadline)
+                .font(.callout)
         }
         .foregroundStyle(.white)
     }

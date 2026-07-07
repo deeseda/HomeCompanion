@@ -29,6 +29,7 @@ struct AccountView: View {
             }
         }
         .background(Color(.systemGroupedBackground))
+        .ignoresSafeArea(.container, edges: selectedTab == .myHome ? .top : [])
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

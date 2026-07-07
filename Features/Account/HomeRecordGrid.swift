@@ -26,6 +26,7 @@ struct HomeRecordGrid: View {
                 Spacer()
 
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(12)
             .background(.thickMaterial)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))

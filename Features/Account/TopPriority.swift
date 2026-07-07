@@ -64,10 +64,10 @@ struct TopPriority: View {
                             Text(health)
                         }
                         
-                        HStack(spacing: 4) {
-                            Image(systemName: "calendar")
-                            Text(due)
-                        }
+//                        HStack(spacing: 4) {
+//                            Image(systemName: "calendar")
+//                            Text(due)
+//                        }
                         
                         HStack(spacing: 4) {
                             Image(systemName: "timer")

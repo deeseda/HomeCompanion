@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct MyHomeTabView: View {
-    // Height of the blue/photo hero region (before the health card overlap).
-    private let heroHeight: CGFloat = 340
+    private let heroHeight: CGFloat = 442
+    private let heroImageHeight: CGFloat = 412
+    private let heroImageBottomInset: CGFloat = 0
 
     var body: some View {
         VStack(spacing: 12) {
+            
             heroSection
+            
             HomeGrid()
+                .padding(.bottom, 36)
+            
             MyProductsSection()
+                .padding(.bottom, 36)
+            
             MySpacesSection()
         }
         .padding(.bottom, 40)
@@ -28,21 +35,22 @@ struct MyHomeTabView: View {
 
             MyHomeHealthCard()
                 .padding(.horizontal, 16)
-                .padding(.top, -70)
+                .padding(.top, -104)
         }
     }
 
     private var hero: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 32) {
+            Spacer(minLength: 160)
+
             MyHomeAddressBlock(
                 address: "100 W Worthington Ave",
                 location: "Charlotte, NC 28203"
             )
-                .padding(.top, 16)
 
             MyHomePropertyStatsPill()
 
-            Spacer(minLength: 24)
+            Spacer(minLength: 112)
         }
         .padding(.horizontal, 16)
         .frame(height: heroHeight, alignment: .top)
@@ -53,35 +61,74 @@ struct MyHomeTabView: View {
     }
 
     private var heroBackground: some View {
-        // Tuning divisor for the parallax stretch on overscroll.
         let stretchDivisor: CGFloat = 442
-        // Extra height above the hero so the image runs up behind the status bar
-        // and nav bar to the top of the screen.
         let topOverhang: CGFloat = 160
 
         return ZStack(alignment: .bottom) {
-            Color.brandBlue
+            LinearGradient(
+                stops: [
+                    .init(color: .brandBlue, location: 0),
+                    .init(color: .brandBlue, location: 0.64),
+                    .init(color: Color(.systemGroupedBackground), location: 0.71),
+                    .init(color: Color(.systemGroupedBackground), location: 1)
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            )
 
             Image("newhouse")
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
                 .frame(maxWidth: .infinity)
-                .frame(height: heroHeight + topOverhang, alignment: .bottom)
+                .frame(height: heroImageHeight + topOverhang, alignment: .bottom)
+                .offset(y: -60)
                 .clipped()
                 .visualEffect { content, proxy in
                     let minY = proxy.frame(in: .scrollView).minY
-                    // Overscroll (pull down): stretch from the bottom.
-                    // Scrolling up: drift slower than the content for parallax.
                     let scale = minY > 0 ? 1 + (minY / stretchDivisor) : 1
                     let offset = minY > 0 ? 0 : -minY * 0.4
                     return content
                         .scaleEffect(scale, anchor: .bottom)
                         .offset(y: offset)
                 }
+                .overlay {
+                    LinearGradient(
+                        colors: [
+                            .brandBlue.opacity(0.94),
+                            .brandBlue.opacity(0.36),
+                            .brandBlue.opacity(0)
+                        ],
+                        startPoint: .top,
+                        endPoint: UnitPoint(x: 0.5, y: 0.38)
+                    )
+                }
+                .overlay {
+                    LinearGradient(
+                        colors: [
+                            .brandBlue.opacity(0.24),
+                            .brandBlue.opacity(0)
+                        ],
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                }
+                .overlay(alignment: .bottom) {
+                    LinearGradient(
+                        colors: [
+                            .clear,
+                            Color(.systemGroupedBackground)
+                        ],
+                        startPoint: .top,
+                        endPoint: .center
+                    )
+                    .frame(height: 48)
+                }
+                .padding(.bottom, heroImageBottomInset)
         }
         .frame(maxWidth: .infinity)
         .frame(height: heroHeight + topOverhang, alignment: .bottom)
         .clipped()
+        .ignoresSafeArea(edges: .top)
     }
 }
 

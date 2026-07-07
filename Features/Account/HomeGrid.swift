@@ -32,10 +32,10 @@ struct HomeGrid: View {
 
             VStack(spacing: 12) {
                 HomeRecordGrid()
-                    .frame(maxHeight: .infinity, alignment: .top)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity,  alignment: .top)
                 
                 CurrentProjectGrid()
-                    .frame(maxHeight: .infinity, alignment: .top)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .frame(height: leftCardHeight, alignment: .top)
